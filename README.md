@@ -25,27 +25,38 @@ Weather forecaster fetched weather data of certain location every 3 hours. It ma
 ## Package Structure
 ---
 The-Weather-Outlook program structured into three packages based on each responsibility:
-1. **Application**, controls Java application (including app window, design, on-click actions, etc). Application package consists of 3 classes:
+1. **application**, controls Java application (including app window, design, on-click actions, etc). Application package consists of 4 classes:
     - UIDesign: components of a window.
-    - WeatherVisualization: data visualization of weather condition.
+    - DisplayForecast: display forecast results of a city.
     - AppWindow: main window of the program.
     - Main: main program which triggers AppWindow.
 
-2. **WeatherForecast**, gets data from OpenWeatherMap API.
-    - DataFetcher: API requester. 
-    - Weather: weather data (humidity, wind, state of weather) of a location.
+2. **openweathermap**, gets data from OpenWeatherMap API.
+    - DataFetcher: request and receive forecast data. 
+    - CityForecast: multiple forecasts of a city per 3 hour.
+    - HourlyForecast: a weather forecast of a city at a time (contains humidity, wind, state of weather status).
+    - ForecastClient: API controller for a city name input; triggers and controls HTTP URL Connection, return multiple city forecast results.
+    - ForecasterURLConnection: Handles URL Connection to openweathermap API.
+    - ForecasterException: Handles Exception.
+
 
 ## Todo List
 ---
-- [ ] Application
-    - [ ] UIDesign
-    - [ ] WeatherVisualization
-    - [ ] AppWindow
-    - [ ] Main
-- [ ] WeatherForecast
-    - [ ] DataFetcher
-    - [ ] Weather
 
+Class | Status
+--- | --- | ---
+**application** | 
+| UIDesign | NOT YET
+|DisplayForecast | NOT YET
+| AppWindow | NOT YET
+| Main | NOT YET
+**openweathermap** | 
+| City | DONE
+| CityForecast | ON PROGRESS
+| HourlyForecast | ON PROGRESS
+| ForecasterClient | ON PROGRESS
+| ForecasterURLConnection | ON PROGRESS 
+| ForecasterException | DONE
 
 ## How to Run
 ---
