@@ -1,29 +1,33 @@
 package openweathermap;
 import java.util.ArrayList;
+import org.json.*;
 
 public class CityForecast {
     private City city;
-    private ArrayList<HourlyForecast> forecastlist;
+    private ArrayList<HourlyForecast> hourlyforecastlist = new ArrayList<>();
 
-    public void setCity(City city) {
-        this.city = city;
+    public City getCity() {
+        return city;
+    }
+
+    public ArrayList<HourlyForecast> getHourlyForecastList() {
+        return hourlyforecastlist;
     }
     
-    public CityForecast(JSONObject forecast) throws ForecasterException {
+    public CityForecast(JSONObject forecastresult) throws ForecasterException {
         try {
-            Object objForecast = parser.parse(forecast);
-            JSONArray array = (JSONArray) obj;
-
-        } catch (ParseException pe) {
-            new ForecasterException("Error Parsing Input");
+            city = new City(forecastresult.getJSONObject("city"));
+            JSONArray forecastlist = (JSONArray) forecastresult.get("list");
+            for (int i = 0; i < forecastlist.length(); i++) {
+                HourlyForecast forecast = new HourlyForecast(forecastlist.getJSONObject(i));
+                addHourlyForecast(forecast);
+            }
+        } catch (JSONException pe) {
+            throw new ForecasterException(pe.getMessage());
         }
     }
 
-    public ArrayList<HourlyForecast> getForecastList() {
-        return forecastlist;
-    }
-
     public void addHourlyForecast(HourlyForecast forecast) {
-        forecastlist.add(forecast);
+        hourlyforecastlist.add(forecast);
     }
 }
