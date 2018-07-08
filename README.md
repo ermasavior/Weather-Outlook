@@ -26,9 +26,9 @@ Wher forecaster fetched weather data of certain location every 3 hours. It may p
 
 The-Weather-Outlook program structured into three packages based on each responsibility:
 1. **application**, controls Java application (including app window, design, on-click actions, etc). Application package consists of 4 classes:
-    - DisplayForecast: display forecast results of a city on application.
-    - UIDesign: UI Design of main window.
-    - Main: main program which triggers main window.
+    - WeatherVisualization: display forecast results of a city on application.
+    - WindowApp: Java Swing frame which contains GUI.
+    - Main: main program which triggers main window and api.
 
 2. **openweathermap**, gets data from OpenWeatherMap API.
     - DataFetcher: request and receive forecast data. 
@@ -44,22 +44,29 @@ The-Weather-Outlook program structured into three packages based on each respons
 Class | Status
 --- | ---
 **application** | 
-| DisplayForecast | NOT YET
-| UIDesign | NOT YET
-| Main | NOT YET
+| WeatherVisualization | ON PROGRESS
+| WindowApp | ON PROGRESS
+| Main | DONE
 **openweathermap** | 
 | City | DONE
-| CityForecast | ON PROGRESS
-| HourlyForecast | ON PROGRESS
-| ForecasterClient | ON PROGRESS
-| ForecasterURLConnection | ON PROGRESS 
+| CityForecast | DONE
+| HourlyForecast | DONE
+| ForecasterClient | DONE
+| ForecasterURLConnection | DONE
 | ForecasterException | DONE
 
 ## How to Run
 
-TBD
+**Open via Intellij IDEA**
+1. Import Weather-Outlook project to Intellij IDEA
+2. Build Project and Run Main to execute
+3. The GUI will show search box. Type city name and click search button to fetch forecast result.
 
 ## Screenshots
+
+TBD
+
+## JDepend Result
 
 TBD
 

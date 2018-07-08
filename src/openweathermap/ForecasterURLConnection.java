@@ -58,7 +58,7 @@ public class ForecasterURLConnection {
         } catch (RuntimeException e) {
             throw new ForecasterException(e.getMessage());
         } catch (IOException e) {
-            throw new ForecasterException("Error I/O");
+            throw new ForecasterException(e.getMessage());
         }
     }
 }

@@ -18,7 +18,7 @@ public class CityForecast {
         try {
             city = new City(forecastresult.getJSONObject("city"));
             JSONArray forecastlist = (JSONArray) forecastresult.get("list");
-            for (int i = 0; i < forecastlist.length(); i++) {
+            for (int i = 0; i < forecastlist.length(); i+=12) {
                 HourlyForecast forecast = new HourlyForecast(forecastlist.getJSONObject(i));
                 addHourlyForecast(forecast);
             }
