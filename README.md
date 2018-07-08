@@ -44,10 +44,10 @@ The-Weather-Outlook program structured into three packages based on each respons
 Class | Status
 --- | ---
 **application** | 
-| WeatherVisualization | ON PROGRESS
-| WindowApp | ON PROGRESS
 | Main | DONE
-**openweathermap** | 
+| WindowApp | DONE
+| WeatherVisualization | DONE (60% sure)
+**openweathermap** |
 | City | DONE
 | CityForecast | DONE
 | HourlyForecast | DONE
@@ -57,13 +57,15 @@ Class | Status
 
 ## How to Run
 
-**Open via Intellij IDEA**
+**Run via Intellij IDEA**
 1. Import Weather-Outlook project to Intellij IDEA
 2. Build Project and Run Main to execute
 3. The GUI will show search box. Type city name and click search button to fetch forecast result.
 
 ## Screenshots
-
+![Home](/image/home.jpg)
+Sadly there's an error on requesting forecast to the openweathermap server :(
+![Connection Timed Out](/image/error.jpg)
 TBD
 
 ## JDepend Result
