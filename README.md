@@ -25,12 +25,12 @@ Wher forecaster fetched weather data of certain location every 3 hours. It may p
 ## Package Structure
 
 The-Weather-Outlook program structured into three packages based on each responsibility:
-1. **application**, controls Java application (including app window, design, on-click actions, etc). Application package consists of 4 classes:
+1. **application**, controls Java application (including app window, design, on-click actions, etc). Application package consists of 3 classes:
     - WeatherVisualization: display forecast results of a city on application.
     - WindowApp: Java Swing frame which contains GUI.
     - Main: main program which triggers main window and api.
 
-2. **openweathermap**, gets data from OpenWeatherMap API.
+2. **openweathermap**, gets data from OpenWeatherMap API. Application package consists of 6 classes:
     - DataFetcher: request and receive forecast data. 
     - CityForecast: multiple forecasts of a city per 3 hour.
     - HourlyForecast: a weather forecast of a city at a time (contains humidity, wind, state of weather status).
