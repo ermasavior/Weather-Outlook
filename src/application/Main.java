@@ -1,7 +1,6 @@
 package application;
 
-//import java.awt.EventQueue;
-import java.awt.*;
+import java.awt.EventQueue;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
