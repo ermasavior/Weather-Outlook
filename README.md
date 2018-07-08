@@ -71,8 +71,9 @@ TBD
 ## JDepend and JUnit
 
 Located on directory src/test
-    - [X] JUnit
-    - [X] JDepend
+
+- [X] JUnit
+- [X] JDepend
 
 ## Author
 
