@@ -63,14 +63,16 @@ Class | Status
 3. The GUI will show search box. Type city name and click search button to fetch forecast result.
 
 ## Screenshots
-![Home](/image/home.jpg)
+![Home](/image/home.png)
 Sadly there's an error on requesting forecast to the openweathermap server :(
 ![Connection Timed Out](/image/error.jpg)
 TBD
 
-## JDepend Result
+## JDepend and JUnit
 
-TBD
+Located on directory src/test
+    - [X] JUnit
+    - [X] JDepend
 
 ## Author
 
