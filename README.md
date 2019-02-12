@@ -62,12 +62,6 @@ Class | Status
 2. Build Project and Run Main to execute
 3. The GUI will show search box. Type city name and click search button to fetch forecast result.
 
-## Screenshots
-![Home](/image/home.png)
-Sadly there's an error on requesting forecast to the openweathermap server :(
-![Connection Timed Out](/image/error.jpg)
-TBD
-
 ## JDepend and JUnit
 
 Located on directory src/test
